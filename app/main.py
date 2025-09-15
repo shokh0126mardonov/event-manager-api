@@ -1,6 +1,10 @@
 from fastapi import FastAPI
+
 from .database import Base, engine
 from .models import users
+
+from .dependencies import get_db
+
 from .routers.users import router as users_router
 from .routers.events import router as events_router
 from .routers.venues import router as venues_router
