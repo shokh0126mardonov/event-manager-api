@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from .database import Base, engine
-from .models import users
+from .models import *
 
 from .dependencies import get_db
 
