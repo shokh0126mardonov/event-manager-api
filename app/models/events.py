@@ -46,6 +46,7 @@ class Events(BaseModel):
 
     venue = relationship("Venues", back_populates="events")
     organizer = relationship("Users", back_populates="events")
+    tickets = relationship("Tickets", back_populates="event")
 
     __table_args__ = (
         CheckConstraint("char_length(name) >= 3", name="event_name_min_length"),
